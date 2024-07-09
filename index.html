@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Football Quiz</title>
+  <style>
+    html body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      overflow: none;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      background-image: url(images/pexels-mike-468229-1171084.jpg);
+      background-position: center;
+      background-size: cover;
+      overflow: auto ;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;     
+    }
+
+    .head h1 {
+      color: #A50044;
+      background-color: rgba(245, 245, 220, 0.8);
+      border-radius: 15px;
+      padding: 5px;
+    }
+
+    .head p {
+      color: #004D98;
+      font-size: 24px;
+      text-align: center;
+      font-weight: bold;
+      background-color: rgba(245, 245, 220, 0.8);
+      border-radius: 15px;
+      padding: 5px;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+
+    .main .start {
+      font-size: 25px;
+      font-weight: bold;
+      border-radius: 4px;
+      color: #004D98;
+      background-color: #f5f5DC;
+      border: 1px solid black;
+      padding: 5px 16px;
+      margin-bottom: 25px;
+      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+
+    .main .start:hover {
+      background-color: #E5E5CC; 
+      color: #0080ff;
+      border-color: #004D98;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .main .how {
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 4px;
+      color: #A50044;
+      background-color: #f5f5DC;
+      border: 1px solid black;
+      padding: 5px 7px;
+      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+
+    .main .how:hover {
+      background-color: #E5E5CC; 
+      color: #ff006a;
+      border-color: #A50044;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .para {
+      margin-top: 40px;
+      border-radius: 8px;
+      background-color: rgba(245, 245, 220, 0.8);
+      padding: 0 10px;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .visible {
+      display: block;
+      opacity: 1;
+    }
+
+    .main .para ul li{
+      font-size: 22px;
+    }
+
+    .c2 {
+      color: #A50044;
+    }
+    
+    .c1 {
+      color: #004D98;;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="head">
+        <h1 class="welcome">Welcome to the Ultimate Football Quiz!</h1>
+        <p>Are you a true football fanatic? Ready to test your knowledge of the beautiful game? <br>Look no further! Our football quiz is here to challenge your brain, entertain, and celebrate the sport we all love. ⚽</p>
+      </div>
+
+      <div class="main">
+        <button class="start" onclick="window.location.href = 'http://127.0.0.1:5500/01_Quiz_Game/question.html';">Start Game</button>
+        <button class="how">How to Play?</button>
+        <div class="para">
+          <ul>
+            <li class="c1">Choose 1 correct answer of the 4 options given to you and click on submit.</li> 
+            <li class="c2">Choose your answers wisely! Each correct answer scores points.</li> 
+            <li class="c1">Once you submit your answer you cannot change it</li> 
+            <li class="c2">You’ll face a series of questions covering early and late football history, club-level facts,<br>and international competitions.</li>
+            <li class="c1">At the end of the quiz, see how you rank against other football enthusiasts on our leaderboard.</li>
+          </ul>
+        </div>  
+      </div>
+      
+    </div>
+
+    <script>
+      const para = document.querySelector('.para');
+      const rules = document.querySelector('.how');
+
+      rules.addEventListener('mouseover', () => {
+        para.classList.add('visible');
+      })
+      
+      rules.addEventListener('mouseout', () => {
+        para.classList.remove('visible');
+      })
+    </script>
+</body>
+</html>
