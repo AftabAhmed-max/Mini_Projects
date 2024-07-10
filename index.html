@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="quiz-info">
+      <h1>Welcome to the Ultimate Football Quiz</h1>
+      <p>Are you a true football fanatic? Ready to test your knowledge of the beautiful game? <br>Look no further! Our football quiz is here to challenge your brain, entertain, and celebrate the sport we all love. ⚽</p>
+    </div>
+    <div class="start-quiz">
+      <button class="start-btn">Start</button>
+      <button class="how">How to Play</button>
+      <div class="rules" style="display: none;">
+        <ul>
+          <li class="c1">Choose 1 correct answer of the 4 options given to you and click on submit.</li> 
+          <li class="c2">Choose your answers wisely! Each correct answer scores points.</li> 
+          <li class="c1">Once you submit your answer you cannot change it</li> 
+          <li class="c2">You’ll face a series of questions covering early and late football history, club-level facts,<br>and international competitions.</li>
+          <li class="c1">At the end of the quiz, see how you rank against other football enthusiasts on our leaderboard.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <button class="next-question" style="display: none;">Next Question</button>
+
+  <div class="quiz-container" style="display: none;">
+    <div class="question-detail">
+      <p class="question-num">Question 1</p>
+      <p class="question">What is the Capital of India and whatver it is?</p>
+    </div>
+    <div class="Answers">
+      <button class="options">Delhi</button>
+      <button class="options">Mumbai</button>
+      <button class="options">Hyderbad</button>
+      <button class="options">India</button>
+    </div>
+  </div>
+
+  <div class="result-container" style="display: none;">
+    <h2 class="score"> Your score : <span id="score">5</span> out of 7</h2>
+    <button class="restart">Restart</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
